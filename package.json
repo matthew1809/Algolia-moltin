@@ -1,0 +1,14 @@
+{
+  "name": "algolia",
+  "version": "1.0.0",
+  "description": "algolia-moltin integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "algoliasearch": "^3.22.3"
+  }
+}
