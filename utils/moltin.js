@@ -10,7 +10,7 @@ const Moltin = moltin.gateway({
  });
 
 exports.GetProducts = function() {
-  return Moltin.Products.All()
+  return Moltin.Products.With(['categories']).All()
  };
 
 exports.GetCategories = function() {
@@ -31,4 +31,8 @@ exports.GetCartItems = function() {
 
 exports.GetOrders = function() {
   return Moltin.Orders.All()
+}
+
+exports.GetOrderItems = function(ID) {
+  return Moltin.Orders.Items(ID)
 }

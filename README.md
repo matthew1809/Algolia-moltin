@@ -1,11 +1,10 @@
 # Moltin & Algolia integration
 
 ## Status
-Work In Progress
-- no working functionality
+- Functional
 
 ## Base functionality:
-ToDo
+Adds moltin products to a new Algolia index called `ProductsIndex`
 
 ## Requirements:
 Algolia account, [sign up here](https://www.algolia.com/users/sign_up)
@@ -26,4 +25,9 @@ exports.MoltinKeys = {
 ```
 
 ## Behaviour
-Will sync your moltin data with Algolia each time it's run.
+- Will sync your moltin products with Algolia each time it's run.
+- The index name is hardcoded in `utils/algolia.js` on line 12 (within `index` variable)
+- N.B. Will not replace your products if run multiple times, instead it will add them again
+
+# Running Instructions
+- `node index.js`

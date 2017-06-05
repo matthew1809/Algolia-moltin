@@ -8,13 +8,14 @@ exports.NewClient = (IndexName) => {
   return client.initIndex(IndexName);
 };
 
-exports.AddToAlgolia = (IndexName, Data) => {
-  IndexName.addObjects(Data, function(err, content) {
+exports.AddToAlgolia = (Data) => {
+    var index = client.initIndex('ProductsIndex');
+  index.addObjects(Data, function(err, content) {
     if (err) {
       console.error(err);
     }
     else {
-      console.log(content)
+      console.log("Your products have been added to Algolia in the index called: ProductsIndex")
     }
   });
 };
