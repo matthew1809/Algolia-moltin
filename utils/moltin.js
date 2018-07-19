@@ -70,3 +70,7 @@ exports.GetCartItems = function() {
 exports.GetOrders = function() {
   return Moltin.Orders.All()
 }
+
+exports.GetOrderItems = function(ID) {
+  return Moltin.Orders.Items(ID)
+}

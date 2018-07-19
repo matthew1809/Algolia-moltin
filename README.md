@@ -1,29 +1,20 @@
 # Moltin & Algolia integration
 
 ## Status
-Work In Progress
-- no working functionality
+- Functional
 
 ## Base functionality:
-ToDo
+Adds moltin products to a new Algolia index defined in your env
 
 ## Requirements:
 Algolia account, [sign up here](https://www.algolia.com/users/sign_up)
 Moltin account, [sign up here](https://accounts.moltin.com/register)
 
-Config file at root containing keys for moltin and Algolia, as follows with the empty strings filled in:
-```
-var exports = module.exports = {};
-
-exports.AlgoliaKeys = {
-  APIKey: '',
-  AppID: ''
-}
-exports.MoltinKeys = {
-  client_id: '',
-  client_secret: ''
-}
-```
+Rename `.example.env` to `.env` and fill in the required values`
 
 ## Behaviour
-Will sync your moltin data with Algolia each time it's run.
+- Will sync your moltin products with Algolia each time it's run.
+- N.B. Will not replace your products if run multiple times, instead it will add them again
+
+# Running Instructions
+- `npm start`
