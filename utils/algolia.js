@@ -1,25 +1,24 @@
-var config = require('../config');
-var algoliasearch = require('algoliasearch');
-var client = algoliasearch(config.AlgoliaKeys.AppID, config.AlgoliaKeys.APIKey);
+require("dotenv").config();
+const algoliasearch = require('algoliasearch');
+var client = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_API_KEY);
 
 var exports = module.exports = {};
 
-exports.NewClient = (IndexName) => {
-  return client.initIndex(IndexName);
-};
+exports.addToAlgolia = (Data, indexName) => {
+  var index = client.initIndex(indexName);
+  index.addObjects(Data, function(err, content) {
 
-exports.AddToAlgolia = (IndexName, Data) => {
-  IndexName.addObjects(Data, function(err, content) {
     if (err) {
       console.error(err);
     }
     else {
-      console.log(content)
+      console.log("Your products have been added to Algolia");
     }
   });
 };
 
-exports.UpdateAlgolia = (IndexName, Data) => {
+
+exports.updateAlgolia = (IndexName, Data) => {
   IndexName.saveObjects(Data, function(err, content) {
     console.log(content);
   });

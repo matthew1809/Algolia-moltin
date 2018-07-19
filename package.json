@@ -4,13 +4,14 @@
   "description": "algolia-moltin integration",
   "main": "index.js",
   "scripts": {
-    "test": "npm start"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@moltin/sdk": "^2.3.0",
-    "algoliasearch": "^3.22.3",
+    "algoliasearch": "^3.29.0",
+    "dotenv": "^6.0.0",
     "fs": "0.0.1-security"
   }
 }
