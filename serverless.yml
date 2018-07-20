@@ -2,7 +2,7 @@ service: moltin-algolia-sync
 
 provider:
   name: aws
-  runtime: nodejs8.9
+  runtime: nodejs
 
   stage: dev
   region: us-east-2
