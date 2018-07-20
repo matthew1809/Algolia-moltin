@@ -2,7 +2,7 @@ service: moltin-algolia-sync
 
 provider:
   name: aws
-  runtime: nodejs
+  runtime: nodejs6.10
 
   stage: dev
   region: us-east-2
