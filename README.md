@@ -4,13 +4,16 @@
 - Functional
 
 ## Base functionality:
-Adds moltin products to a new Algolia index defined in your env
-Every 24 hours, updates those products and adds new products
+Adds moltin products to a new Algolia index defined in your env.
+
+Every 24 hours, updates those products and adds new products.
+
+Matches products in Moltin to those in Algolia on the Moltin product ID.
 
 ## Requirements:
-Algolia account, [sign up here](https://www.algolia.com/users/sign_up)
-Moltin account, [sign up here](https://accounts.moltin.com/register)
-Serverless account, [sign up here](https://dashboard.serverless.com/)
+1. Algolia account, [sign up here](https://www.algolia.com/users/sign_up)
+2. Moltin account, [sign up here](https://accounts.moltin.com/register)
+3. Serverless account, [sign up here](https://dashboard.serverless.com/)
 
 Rename `.example.env` to `.env` and fill in the required values`
 
