@@ -1,3 +1,12 @@
-/node_modules
-/localStorage
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# envs
 .env
+
+#temp storage
+/localStorage

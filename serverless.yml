@@ -1,0 +1,9 @@
+service: moltin-algolia-sync
+
+provider:
+  name: aws
+  runtime: nodejs8.9
+
+functions:
+  run:
+    handler: handler.run
