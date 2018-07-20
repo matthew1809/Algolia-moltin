@@ -4,6 +4,14 @@ provider:
   name: aws
   runtime: nodejs8.9
 
+  stage: dev
+  region: us-east-2
+
+
 functions:
   run:
     handler: handler.run
+    events:
+      - schedule: 
+        rate: rate(24 hours)
+        name: daily scheduler
