@@ -1,6 +1,6 @@
 require("dotenv").config();
 const algoliasearch = require("algoliasearch");
-var client = algoliasearch(
+const client = algoliasearch(
   process.env.ALGOLIA_APP_ID,
   process.env.ALGOLIA_API_KEY
 );
