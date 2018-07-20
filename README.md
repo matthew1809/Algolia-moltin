@@ -17,10 +17,6 @@ Matches products in Moltin to those in Algolia on the Moltin product ID.
 
 Rename `.example.env` to `.env` and fill in the required values`
 
-## Behaviour
-- Will sync your moltin products with Algolia each time it's run.
-- N.B. Will not replace your products if run multiple times, instead it will add them again
-
 ## Deploying
 Built to be deployed using the serverless framework, configured for AWS.
 
