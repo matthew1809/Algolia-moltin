@@ -21,3 +21,13 @@ exports.addToAlgoliaIndex = (Data, indexName) => {
     }
   });
 };
+
+exports.deleteFromAlgoliaIndex = (id, indexName) => {
+  let index = client.initIndex(indexName);
+  
+  index.deleteObject(id, function(err, res) {
+  if (err) throw err;
+
+  console.log(res);
+});
+}

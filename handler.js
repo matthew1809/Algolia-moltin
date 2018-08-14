@@ -16,3 +16,16 @@ module.exports.run = async (event, context) => {
     return e;
   }
 };
+
+module.exports.delete = async (event, context) => {
+  try {
+
+    let body = JSON.parse(event.body);
+    let id = body.resources.id;
+
+    return Algolia.deleteFromAlgoliaIndex(id, indexName);
+
+  } catch (e) {
+    return e;
+  }
+};

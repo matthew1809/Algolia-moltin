@@ -43,26 +43,8 @@ exports.GetProducts = async function(PageOffsetCounter, productsArray) {
   }
 };
 
-exports.GetCategories = function() {
-  return Moltin.Categories.All();
+exports.GetProductById = function(id) {
+  return Moltin.Products.Get(id);
 };
 
-exports.GetBrands = function() {
-  return Moltin.Brands.All();
-};
 
-exports.GetFile = function(ID) {
-  return Moltin.Files.Get(ID);
-};
-
-exports.GetCartItems = function() {
-  return Moltin.Cart.Items();
-};
-
-exports.GetOrders = function() {
-  return Moltin.Orders.All();
-};
-
-exports.GetOrderItems = function(ID) {
-  return Moltin.Orders.Items(ID);
-};
